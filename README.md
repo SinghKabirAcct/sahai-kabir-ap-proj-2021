@@ -3,6 +3,7 @@ This is Kabir's 2021 AP Project.
 
 ALL FILES APART FROM CODE.MJS ARE UNIMPORTANT CONFIG AND MODULE FILES. TO REPLICATE THIS PROJECT... DO THE FOLLOWING:
 *NOTE: NODE.JS MUST BE INSTALLED GLOBALLY FOR THIS PROJECT!!
+*NOTE: PYTHON MUST BE INSTALLED GLOBALLY FOR THIS PROJECT!!
 1. Make a new folder for this project.
 2. Download code.mjs off this github and move it to your new folder.
 3. Open a terminal and make sure it is in your project's file/directory, If it isn't, type 'cd FOLDERNAME' and press enter.
