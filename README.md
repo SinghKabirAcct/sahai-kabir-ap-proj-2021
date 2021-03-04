@@ -12,8 +12,8 @@ How to download the code:
 
 How to run the code:
 
-1. Make sure node.js and python are installed globally
-2. Type 'py runner.py' into your terminal and press enter.
-3. After following step 3, the terminal should ask you whether or not this is your first time running the code. Answer the prompt truthfully or else the config and module files will fail and the code won't work
-4. The code should run and you should see it prompting you to answer multiple questions and it should run based off of your answers. 
-5. Enjoy!!
+4. Make sure node.js and python are installed globally and that you did step 3 from the download section.
+5. Type 'py runner.py' into your terminal and press enter.
+6. After following step 3, the terminal should ask you whether or not this is your first time running the code. Answer the prompt truthfully or else the config and module files will fail and the code won't work.
+7. The code should run and you should see it prompting you to answer multiple questions and it should run based off of your answers. 
+8. Enjoy!!
