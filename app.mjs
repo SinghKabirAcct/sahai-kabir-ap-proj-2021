@@ -3,8 +3,8 @@ import http from 'http'
 import nodemailer from 'nodemailer'
 import readSync from 'readline-sync'
 //initializing localhost url
-let hostname = '127.0.0.1'
-let port = 3030
+const hostname = '127.0.0.1'
+const port = 3030
 
 //creating localhost function
 function serverConnect(){
@@ -20,7 +20,7 @@ function serverConnect(){
 }
 //creating mail function
 function mailSend(youEmail, pass, recipient, subject, text){
-  var transporter = nodemailer.createTransport({
+  let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: youEmail,
@@ -28,7 +28,7 @@ function mailSend(youEmail, pass, recipient, subject, text){
     }
   })
 
-  var mailOptions = {
+  let mailOptions = {
     from: youEmail,
     to: recipient,
     subject: subject,
@@ -45,35 +45,35 @@ function mailSend(youEmail, pass, recipient, subject, text){
 }
 
 //empty list for all the send dates
-var dates = []
+let dates = []
 
 //initialize variables for send data and auth data.
-var youEmail, pass, recipient, subject, text, datePrompt, recipientAsk
+let youEmail, pass, recipient, subject, text, datePrompt, recipientAsk
 
 //recieve send and auth data
 function queries(){
-  youEmail = readSync.question('List your gmail address... ')
-  pass = readSync.question('Please list your gmail password... ')
-  recipientAsk = readSync.question('List all recipients... ')
+  youEmail = readSync.question('List your gmail address (example@gmail.com)... ')
+  pass = readSync.question('Please list your gmail password... ', {hideEchoBack: true, mask: ' '})
+  recipientAsk = readSync.question('List all recipients (use comma and space to seperate two addresses)... ')
   recipient = recipientAsk.split(', ')
   subject = readSync.question('Please input subject... ')
   text = readSync.question('Please input the text... ')
-  datePrompt = readSync.question('List the date... ')
+  datePrompt = readSync.question('List the date (use comma and space to seperate two dates)... ')
   //divide dates by double space and add
-  var tmp = datePrompt.split('  ')
+  let tmp = datePrompt.split(', ')
   dates.push(tmp)
   dates = dates[0]
 } 
 
 //collecting current date in mm/dd/yy hh:mm format
-var result
+let result
 function dateRefresh(){
-  var dateAPI = new Date()
+  let dateAPI = new Date()
   let currYear = String(dateAPI.getFullYear())
   let currDay = String(dateAPI.getDay())
   let currHour = String(dateAPI.getHours())
   let currMinute = String(dateAPI.getMinutes())
-  let currMonth = String(dateAPI.getMonth())
+  let currMonth = String(dateAPI.getMonth() + 1)
   result = currMonth + '/' + currDay + '/' + currYear + ' ' + currHour + ':' + currMinute
 }
 
