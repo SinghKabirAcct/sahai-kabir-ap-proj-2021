@@ -57,13 +57,18 @@ function queries(){
 //This function returns the current date in mm/dd/yy hh:mm format
 let result
 function dateRefresh(){
-  let dateAPI = new Date()
-  let currYear = String(dateAPI.getFullYear())
-  let currDay = String(dateAPI.getDay())
-  let currHour = String(dateAPI.getHours())
-  let currMinute = String(dateAPI.getMinutes())
-  let currMonth = String(dateAPI.getMonth() + 1)
-  result = currMonth + '/' + currDay + '/' + currYear + ' ' + currHour + ':' + currMinute
+  let today = new Date()
+  let dd = String(today.getDate())
+  let mm = String(today.getMonth() + 1)
+  let yyyy = today.getFullYear()
+  let hh = today.getHours()
+  let minu = String(today.getMinutes())
+  while (minu.length < 2){
+    minu = '0' + minu
+  }
+  result = mm + '/' + dd + '/' + yyyy + ' ' + hh + ':' + minu
+
+  console.log(result)
 }
 
 queries() // executes the queries() function that starts at line 42
@@ -92,3 +97,4 @@ class Solution {
 
 //runs the sol() function at line 85
 new Solution().sol()
+
