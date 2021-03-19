@@ -8,7 +8,7 @@ How to download the code:
 
 1. Open a terminal window.
 2. Type 'git clone https://github.com/sahai-kabir/sahai-kabir-ap-proj-2021' into your terminal and press enter.
-3. Type 'cd sahai-kabir-ap-proj-2021' into your terminal and press enter twice.
+3. Type 'cd sahai-kabir-ap-proj-2021' into your terminal and press enter.
 
 How to run the code:
 
