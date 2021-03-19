@@ -7,13 +7,14 @@ This is Kabir's 2021 AP Project.
 How to download the code:
 
 1. Open a terminal window.
-2. Type 'git clone https://github.com/sahai-kabir/sahai-kabir-ap-proj-2021.git' into your terminal and press enter.
-3. Type 'cd sahai-kabir-ap-proj-2021' into your terminal and press enter.
+2. Type 'git clone https://github.com/sahai-kabir/sahai-kabir-ap-proj-2021' into your terminal and press enter.
+3. Type 'cd sahai-kabir-ap-proj-2021' into your terminal and press enter twice.
 
 How to run the code:
 
 4. Make sure node.js and python are installed globally and that you did step 3 from the download section.
 5. Type 'py runner.py' into your terminal and press enter.
-6. After following step 3, the terminal should ask you whether or not this is your first time running the code. Answer the prompt truthfully or else the config and module files will fail and the code won't work.
-7. The code should run and you should see it prompting you to answer multiple questions and it should run based off of your answers. 
-8. Enjoy!!
+6. After following step 5, the terminal should ask you whether or not this is your first time running the code in this folder. Answer the prompt truthfully or else the config and module files will fail and the code won't work.
+7. Type in 'node app.mjs' and press enter.
+8. Answer the prompts and your emails should send!
+9. Enjoy!!
