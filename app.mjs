@@ -37,16 +37,16 @@ let dates = []
 //initialize variables for send data and auth data.
 let youEmail, pass, recipient, subject, text, datePrompt, recipientAsk
 
-//This function asks the user to input their: email credentials, who they want to send an email to, the subject, and the body / text
+//When called, this function asks the user to input their: email credentials, who they want to send an email to, the subject, and the body / text
 //The data from all these inputs will then be used to run the mailSend() function
 function queries(){
   youEmail = readSync.question('List your gmail address (example@gmail.com)... ')
-  pass = readSync.question('Please list your gmail password... ', {hideEchoBack: true, mask: ' '})
+  pass = readSync.question('Please list your gmail password... ', {hideEchoBack: true, mask: '•'})
   recipientAsk = readSync.question('List all recipients (use comma and space to seperate two addresses)... ')
   recipient = recipientAsk.split(', ')
   subject = readSync.question('Please input subject... ')
   text = readSync.question('Please input the text... ')
-  datePrompt = readSync.question('List the date (use comma and space to seperate two dates)... ')
+  datePrompt = readSync.question('List the date in mm/dd/yy hh:mm(am/pm) (use comma and space to seperate two dates) example: 3/18/2021 7:55am, 3/19/2021 7:55... ')
   //divide dates by double space and add
   let tmp = datePrompt.split(', ')
   // Adds the dates the user wants to send the mail at to the dates list
@@ -54,7 +54,7 @@ function queries(){
   dates = dates[0]
 } 
 
-//This function returns the current date in mm/dd/yy hh:mm format
+//When called this function returns the current date in mm/dd/yy hh:mm format
 let result
 function dateRefresh(){
   let today = new Date()
@@ -63,12 +63,13 @@ function dateRefresh(){
   let yyyy = today.getFullYear()
   let hh = today.getHours()
   let minu = String(today.getMinutes())
+  let ampm = 'am'
   while (minu.length < 2){
     minu = '0' + minu
+    ampm = 'pm'
   }
-  result = mm + '/' + dd + '/' + yyyy + ' ' + hh + ':' + minu
+  result = mm + '/' + dd + '/' + yyyy + ' ' + hh + ':' + minu + ampm //mm/dd/yy hh:mm
 
-  console.log(result)
 }
 
 queries() // executes the queries() function that starts at line 42
