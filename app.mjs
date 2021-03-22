@@ -84,12 +84,13 @@ class Solution {
     matches the current date */
     if (dates.includes(result)){
       mailSend(youEmail, pass, recipient, subject, text) // sends the mail using the data that the 
-      dates.splice(dates.indexOf(result), 1) /*If the current date is that of when the user wants the email to send, remove the date from the list to avoid the same email             sending multiple times in the same minute and hour */
+      dates.splice(dates.indexOf(result), 1) /*If the current date is that of when the user wants the email to send, remove the date from the list to avoid the same email sending multiple times in the same minute and hour */
       return 'done'
     }
   }
   sol(){
-    const runner = setInterval(this._sol_help, 2500) /* runs the _sol_help() function (which checks the time and sends the email if the time is righr) at line 75 every two           seconds */
+    console.log('visit this link to allow this app to run! https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4NT-pdfR0PgNSsXPgElqwC3cOufJ47vTzVwT89ZJkLV-Z2reYhL-Sh_P5Xwnz0Gjm3Gh5W1BlKGhORKS5Zd9b6xo1058A')
+    const runner = setInterval(this._sol_help, 2500) /* runs the _sol_help() function (which checks the time and sends the email if the time is righr) at line 75 every two seconds */
     if (dates.length == 0){
       clearInterval(runner)
     }
