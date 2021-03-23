@@ -50,8 +50,7 @@ function queries(){
   //divide dates by double space and add
   let tmp = datePrompt.split(', ')
   // Adds the dates the user wants to send the mail at to the dates list
-  dates.push(tmp)
-  dates = dates[0]
+  dates = tmp
 } 
 
 //When called this function returns the current date in mm/dd/yy hh:mm format
