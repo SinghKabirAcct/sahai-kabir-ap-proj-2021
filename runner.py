@@ -9,4 +9,4 @@ if runStatus == 'y':
     os.system("npm init -y") # creates mandatory files needed to store important data about this folder's programs
     os.system("npm install nodemailer") # installs package needed to send mail
     os.system("npm install readline-sync") # installs package needed to allow user to input date into the terminal
-print('Now type the following command: node app.mjs')
+print('IMPORTANT: Now type the following command: node app.mjs')
